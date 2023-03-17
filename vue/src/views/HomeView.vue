@@ -1,11 +1,8 @@
 import TheWelcome from '../components/TheWelcome.vue'
 <template>
-  <main>
-    <TheWelcome />
-    <div class="home">
-      <button v-if="loggedIn">Log Out</button>
-      <button v-else>Login</button>
-  </main>
+  <TheWelcome />
+  <main class="home"></main>
+  <input type="text"
 </template>
 
 <script>
@@ -14,12 +11,10 @@ export default {
   components: {},
   data() {
     return {
-      student: 'Harry',
-      graduated: true,
-      animals: ['Pig', 'Horse', 'Donkey', 'Cow', 'Duck']
-      //animals
+      message: ''
     }
-  }
+  },
+  methods: {}
 }
 </script>
 <style></style>
