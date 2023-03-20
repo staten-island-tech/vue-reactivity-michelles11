@@ -1,8 +1,11 @@
 import TheWelcome from '../components/TheWelcome.vue'
 <template>
   <TheWelcome />
-  <main class="home"></main>
-  <input type="text"
+  <div class="home">
+    <select v-model="selected">
+    <option value =""></option>
+    </option></select>
+  </div>
 </template>
 
 <script>
@@ -11,10 +14,11 @@ export default {
   components: {},
   data() {
     return {
-      message: ''
+      checkedNames: []
     }
   },
   methods: {}
 }
 </script>
+
 <style></style>
