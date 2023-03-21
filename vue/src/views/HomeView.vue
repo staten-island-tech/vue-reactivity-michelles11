@@ -2,23 +2,24 @@ import TheWelcome from '../components/TheWelcome.vue'
 <template>
   <TheWelcome />
   <div class="home">
-    <select v-model="selected">
-    <option value =""></option>
-    </option></select>
+    <Button></Button>
   </div>
 </template>
 
 <script>
+import Button from '../components/Button.vue';
 export default {
   name: 'Home',
-  components: {},
+  components: {
+    Button,
+  },
   data() {
     return {
-      checkedNames: []
-    }
-  },
-  methods: {}
-}
+      selected: '',
+    };
+  }
+  methods: {},
+  }
 </script>
 
 <style></style>
