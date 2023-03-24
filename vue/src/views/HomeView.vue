@@ -2,13 +2,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 <template>
   <TheWelcome />
   <div class="home">
-    <Button @button-click="bye">Button 1</Button>
-    <Button @button-click="hello">Button 2</Button>
-    <Card
-      title="Hello World"
-      description="blah blah blah "
-      image="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Vulpes_vulpes_ssp_fulvus.jpg/1200px-Vulpes_vulpes_ssp_fulvus.jpg"
-    ></Card>
+    <Card v-for="tvshow in tvshows" :key="tvshow.name" :title="tvshow.name" />
   </div>
 </template>
 
@@ -23,34 +17,67 @@ export default {
   },
   data() {
     return {
+      selected: '',
       tvshows: [
-        'Gilmore Girls',
-        'Friends',
-        'The Office',
-        'The Vampire Diaries',
-        'How I Met Your Mother',
-        'Breaking Bad',
-        'Arrested Development',
-        'Outer Banks',
-        'Ted Lasso',
-        'Shrinking',
-        'A Series of Unfortunate Events',
-        'Jane The Virgin',
-        'Emily In Paris',
-        'Gossip Girl',
-        ''
+        {
+          name: 'Gilmore Girls',
+          image: 'https://flxt.tmsimg.com/assets/p184655_b_v10_av.jpg',
+          streaming: ''
+        },
+        {
+          name: 'Friends',
+          image:
+            'https://i.shgcdn.com/3cfb514f-e69c-4450-8bcc-86f8474e5fb6/-/format/auto/-/preview/3000x3000/-/quality/lighter/',
+          streaming: ''
+        },
+        {
+          name: 'The Office',
+          image:
+            'https://roost.nbcuni.com/bin/viewasset.html/content/dam/Peacock/Campaign/landingpages/library/theoffice/mainpage/office-social-min.png/_jcr_content/renditions/original',
+          streaming: ''
+        },
+        {
+          name: 'The Vampire Diaries',
+          image: 'https://flxt.tmsimg.com/assets/p3563021_b_v8_bb.jpg',
+          streaming: ''
+        },
+        {
+          name: 'How I Met Your Mother',
+          image: 'https://flxt.tmsimg.com/assets/p185124_b_v9_aj.jpg',
+          streaming: ''
+        },
+        {
+          name: 'Breaking Bad',
+          image:
+            'https://m.media-amazon.com/images/M/MV5BN2VjOTkwMjgtYWEyMy00MzNmLTllMjktNDI1ZmRhYTAwYTg1XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg',
+          streaming: ''
+        },
+        {
+          name: 'Arrested Development',
+          image:
+            'https://img4.hulu.com/user/v3/artwork/92c225ee-2d39-4cb3-a43b-fbcffbefeeb4?base_image_bucket_name=image_manager&base_image=a73fca41-dc41-4d1d-a515-817375bc8853&size=1200x630&format=jpeg',
+          streaming: ''
+        },
+        {
+          name: 'Outer Banks',
+          image: 'https://staticg.sportskeeda.com/editor/2023/02/b0226-16755208881191-1920.jpg',
+          streaming: ''
+        },
+        {
+          name: 'Ted Lasso',
+          image:
+            'https://m.media-amazon.com/images/M/MV5BMTdmZjBjZjQtY2JiNS00Y2ZlLTg2NzgtMjUzMGY2OTVmOWJiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg',
+          streaming: ''
+        },
+        { name: 'Shrinking', image: '', streaming: '' },
+        { name: 'A Series of Unfortunate Events', image: '', streaming: '' },
+        { name: 'Emily In Paris', image: '', streaming: '' },
+        { name: 'Gossip Girl', image: '', streaming: '' }
       ]
     }
   },
 
-  methods: {
-    hello: function () {
-      console.log('hello')
-    },
-    bye: function () {
-      console.log('goodbye')
-    }
-  }
+  methods: {}
 }
 </script>
 

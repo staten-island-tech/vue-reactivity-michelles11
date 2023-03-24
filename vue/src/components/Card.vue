@@ -1,8 +1,9 @@
 <template>
   <div class="card">
+    <Button />
     <h2>{{ title }}</h2>
-    <img v-bind:src="image" alt="" />
-    <p>{{ description }}</p>
+    <img :src="image" alt="" />
+    <h3>streaming</h3>
   </div>
 </template>
 
@@ -11,8 +12,8 @@ export default {
   name: 'Card',
   props: {
     title: String,
-    description: String,
-    image: String
+    image: String,
+    streaming: String
   }
 }
 </script>
@@ -30,7 +31,7 @@ export default {
   height: 500px;
   margin: 10px auto;
 }
-.image {
+image {
   height: 30vh;
   border-radius: 1rem;
 }
