@@ -2,7 +2,13 @@ import TheWelcome from '../components/TheWelcome.vue'
 <template>
   <TheWelcome />
   <div class="home">
-    <Card v-for="tvshow in tvshows" :key="tvshow.name" :title="tvshow.name" />
+    <Card
+      v-for="tvshow in tvshows"
+      :key="tvshow.name"
+      :title="tvshow.name"
+      :streamservice="tvshow.streaming"
+      :image="tvshow.image"
+    />
   </div>
 </template>
 
