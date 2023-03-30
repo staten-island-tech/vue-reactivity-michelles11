@@ -1,5 +1,6 @@
 import TheWelcome from '../components/TheWelcome.vue'
 <template>
+  From A: {{ button.count }}
   <TheWelcome />
   <div class="home">
     <Card
@@ -13,7 +14,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 </template>
 
 <script>
-import Button from '../components/Button.vue'
+import { button } from './button.js'
 import Card from '../components/Card.vue'
 export default {
   name: 'Home',
@@ -23,7 +24,7 @@ export default {
   },
   data() {
     return {
-      selected: '',
+      button,
       tvshows: [
         {
           name: 'Gilmore Girls',
@@ -98,6 +99,17 @@ export default {
           image:
             'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91I8ElmqRZL._AC_UF894,1000_QL80_.jpg',
           streaming: 'HBO Max'
+        },
+        {
+          name: 'Stranger Things',
+          image:
+            'https://m.media-amazon.com/images/M/MV5BMDRjYWI5NTMtZTYzZC00NTg4LWI3NjMtNmI3MTdhMWQ5MGJlXkEyXkFqcGdeQXVyNTg4MDc4Mg@@._V1_.jpg',
+          streaming: 'Netflix'
+        },
+        {
+          name: 'Euphoria',
+          image: 'https://flxt.tmsimg.com/assets/p16805962_b_h9_aa.jpg',
+          streaming: 'HBO Max'
         }
       ]
     }
@@ -107,4 +119,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.home {
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+}
+</style>
