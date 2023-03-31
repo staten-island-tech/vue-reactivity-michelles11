@@ -1,7 +1,9 @@
 import TheWelcome from '../components/TheWelcome.vue'
 <template>
-  From A: {{ button.count }}
   <TheWelcome />
+  <div>
+    <button @click="store.increment()">From HomeView: {{ store.count }}</button>
+  </div>
   <div class="home">
     <Card
       v-for="tvshow in tvshows"
@@ -11,20 +13,22 @@ import TheWelcome from '../components/TheWelcome.vue'
       :image="tvshow.image"
     />
   </div>
+  <div class="button" v-for="tvshows in tvshows">
+    <Button @click="authState">Add to Cart</Button>
+  </div>
 </template>
 
 <script>
-import { button } from './button.js'
 import Card from '../components/Card.vue'
+import { store } from '../store'
 export default {
   name: 'Home',
   components: {
-    Button,
     Card
   },
   data() {
     return {
-      button,
+      store,
       tvshows: [
         {
           name: 'Gilmore Girls',
