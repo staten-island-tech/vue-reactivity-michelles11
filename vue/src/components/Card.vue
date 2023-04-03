@@ -3,6 +3,7 @@
     <h2>{{ title }}</h2>
     <img :src="getImage" alt="" />
     <h3>{{ streaming }}</h3>
+    <Button @click="store.increment()">Add to Cart : test</Button>
   </div>
 </template>
 

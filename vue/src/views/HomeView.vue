@@ -13,9 +13,6 @@ import TheWelcome from '../components/TheWelcome.vue'
       :image="tvshow.image"
     />
   </div>
-  <div class="button" v-for="tvshows in tvshows">
-    <Button @click="authState">Add to Cart</Button>
-  </div>
 </template>
 
 <script>
