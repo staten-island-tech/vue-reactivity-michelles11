@@ -51,4 +51,19 @@ img {
   border-radius: 1rem;
   height: 70%;
 }
+button {
+  width: 100px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ac7165;
+  color: white;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+}
+button:active {
+  transform: scale(0.6);
+}
 </style>
