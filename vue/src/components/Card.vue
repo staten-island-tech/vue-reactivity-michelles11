@@ -3,9 +3,12 @@
     <h2>{{ title }}</h2>
     <img :src="getImage" alt="" />
     <h3>{{ streaming }}</h3>
-    <Button @click="store.increment()">Add to Cart : test</Button>
+    <button @click="Addtocart">Add to Cart</button>
   </div>
 </template>
+<script setup>
+import { store } from './store.js'
+</script>
 
 <script>
 export default {
@@ -18,6 +21,14 @@ export default {
   computed: {
     getImage: function () {
       return this.image
+    }
+  },
+  methods: {
+    Addtocart: function () {
+      store.push({
+        name: this.title,
+        imag: this.getImage
+      })
     }
   }
 }

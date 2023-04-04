@@ -1,18 +1,18 @@
 <template>
-  <div class="My Cart">
-    <h1></h1>
-  </div>
-  <div>
-    <button @click="store.increment()">From AboutView: {{ store.count }}</button>
-  </div>
+  <div class="My Cart"></div>
+  <Card v-for="items in store" :key="items.name" :title="items.name" :image="items.imag" />
 </template>
 <script>
-import { store } from '../store'
+import Card from '../components/Card.vue'
+import { store } from '../components/store.js'
 export default {
   data() {
     return {
       store
     }
+  },
+  components: {
+    Card
   }
 }
 </script>

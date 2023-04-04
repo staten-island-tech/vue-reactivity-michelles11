@@ -1,9 +1,4 @@
-import TheWelcome from '../components/TheWelcome.vue'
 <template>
-  <TheWelcome />
-  <div>
-    <button @click="store.increment()">From HomeView: {{ store.count }}</button>
-  </div>
   <div class="home">
     <Card
       v-for="tvshow in tvshows"
@@ -17,7 +12,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <script>
 import Card from '../components/Card.vue'
-import { store } from '../store'
+import { store } from '../components/store'
 export default {
   name: 'Home',
   components: {
