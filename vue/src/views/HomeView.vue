@@ -4,7 +4,7 @@
       v-for="tvshow in tvshows"
       :key="tvshow.name"
       :title="tvshow.name"
-      :streamservice="tvshow.streaming"
+      :streaming="tvshow.streaming"
       :image="tvshow.image"
     />
   </div>
